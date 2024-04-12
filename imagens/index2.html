@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Reserva de Hotel</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header img {
+        width: 150px;
+        height: auto;
+    }
+
+    nav {
+        background-color: #444;
+        overflow: hidden;
+    }
+
+    nav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    form {
+        background-color: #f2f2f2;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        width: 50%;
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"],
+    textarea,
+    select {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="imagens/logo.png" alt="Logo do hotel">
+</header>
+
+<nav>
+    <a href="#">Página Inicial</a>
+    <a href="#">Sobre</a>
+    <a href="#">Serviços</a>
+    <a href="#">Contato</a>
+</nav>
+
+<form action="#" method="post">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" required><br>
+
+    <label for="sexo">Sexo:</label><br>
+    <select id="sexo" name="sexo" required>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Outro</option>
+    </select><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="data_chegada">Data de Chegada:</label><br>
+    <input type="date" id="data_chegada" name="data_chegada" required><br>
+
+    <label for="num_noites">Número de Noites:</label><br>
+    <input type="number" id="num_noites" name="num_noites" min="1" required><br>
+
+    <label for="num_hospedes">Número de Hóspedes:</label><br>
+    <input type="number" id="num_hospedes" name="num_hospedes" min="1" required><br>
+
+    <label for="total_estimado">Total Estimado:</label><br>
+    <input type="text" id="total_estimado" name="total_estimado" required><br>
+
+    <label for="mensagem">Mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br>
+
+    <input type="checkbox" id="newsletter" name="newsletter" value="sim" checked>
+    <label for="newsletter">Desejo receber informações por newsletter</label><br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>
