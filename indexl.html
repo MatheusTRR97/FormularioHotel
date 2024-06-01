@@ -4,139 +4,67 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulário de Reserva de Hotel</title>
-<style>
-    
-    form {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        width: 400px;
-    }
-    
-    label {
-        font-weight: bold;
-    }
-    input[type="text"],
-    input[type="email"],
-    input[type="date"],
-    input[type="number"],
-    textarea {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    select {
-        width: 100%;
-        padding: 8px;
-        margin-bottom: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
-    input[type="checkbox"] {
-        margin-right: 5px;
-    }
-    input[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        width: 100%;
-    }
-    input[type="submit"]:hover {
-        background-color: #45a049;
-    }
-
-    
-    body {
-        background-color: #4CAF50;
-    }
-    #projeto1 {
-        background-color: aquamarine;
-        text-align: center;
-    padding: 15px;
-    width: 350px;
-    margin-left: 450px;
-    margin-top: 40px;
-    border-radius: 33px;
-    background: #f8f7f7;
-    box-shadow:  20px 20px 60px #0e01019c,
-             -20px -20px 60px #0a01011a;
-
-    }
-    #projeto2, #projeto3 {
-        margin-left: 400px;
-        text-align: center;
-    padding: 15px;
-    width: 440px;
-    margin-left: 400px;
-    margin-top: 40px;
-    border-radius: 33px;
-    background: #f8f7f7;
-    box-shadow:  20px 20px 10px #0e01019c,
-             20px 20px 10px #0a01011a;
-    }
-    #imagens{
-        margin-left: 525px;
-}
-    
-</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="imagens">
-        <img src="imagens/logo.png" alt="Logo do hotel">
+    <header class="text-center mt-3">
+        <img src="imagens/logo.png" alt="Logo do hotel" class="img-fluid">
     </header>
-<div id="projeto1">
-                <h2>Formulario de cadastro Hotel Dallas</h2>
-</div>
-        
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center">Formulário de Cadastro Hotel Dallas</h2>
+                <form id="hotelForm">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo" name="sexo" class="form-control" required>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="data_chegada">Data de Chegada:</label>
+                        <input type="date" id="data_chegada" name="data_chegada" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="num_noites">Número de Noites:</label>
+                        <input type="number" id="num_noites" name="num_noites" class="form-control" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="num_hospedes">Número de Hóspedes:</label>
+                        <input type="number" id="num_hospedes" name="num_hospedes" class="form-control" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="total_estimado">Total Estimado:</label>
+                        <input type="text" id="total_estimado" name="total_estimado" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" id="newsletter" name="newsletter" class="form-check-input" value="sim" checked>
+                        <label for="newsletter" class="form-check-label">Desejo receber informações por Email</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
-<div id="projeto2">
-<form action="#" method="post">
-
-    <label for="nome">Nome:</label>
-    <input type="text" id="nome" name="nome" required>
-
-    <label for="sexo">Sexo:</label>
-    <select id="sexo" name="sexo" required>
-        <option value="masculino">Masculino</option>
-        <option value="feminino">Feminino</option>
-        <option value="outro">Outro</option>
-    </select>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-
-    <label for="data_chegada">Data de Chegada:</label>
-    <input type="date" id="data_chegada" name="data_chegada" required>
-
-    <label for="num_noites">Número de Noites:</label>
-    <input type="number" id="num_noites" name="num_noites" min="1" required>
-
-    <label for="num_hospedes">Número de Hóspedes:</label>
-    <input type="number" id="num_noites" name="num_noites" min="1" required>
-    
-
-</form>
-</div>
-<div id="projeto3">
-<form>
-<label for="total_estimado">Total Estimado:</label><br>
-    <input type="text" id="total_estimado" name="total_estimado" required><br>
-
-    <label for="mensagem">Mensagem:</label><br>
-    <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br>
-
-    <input type="checkbox" id="newsletter" name="newsletter" value="sim" checked>
-    <label for="newsletter">Desejo receber informações por Email</label><br>
-
-    <input type="submit" value="Enviar">
-</form>
-</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
 </body>
+</html>
